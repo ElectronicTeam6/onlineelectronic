@@ -48,6 +48,81 @@ public class AdminWebController {
 		
 		return null;
 	}
+	//http://localhost:4444/es/profile/Profiles
+	@GetMapping("/Profiles")
+	public List<Profile> getAllProfiles()
+	{
+
+		try {
+			List<Profile>  allExtractedUsers = userService.getUserProfile();
+			
+			return allExtractedUsers;
+			
+		} catch (Exception e) {
+		
+			System.out.println(e);
+			
+		}
+		
+		return null;
+	}
+	
+	//	http://localhost:8888/es/deliveryAgent/OnlineOrders
+	@GetMapping("/OnlineOrders")
+	public List<OnlineOrder> getAllOrders()
+	{
+
+		try {
+			List<OnlineOrder>  allExtractedUsers = userService.getAllOrders();
+			
+			return allExtractedUsers;
+			
+		} catch (Exception e) {
+		
+			System.out.println(e);
+			
+		}
+		
+		return null;
+	}
+	
+
+	@GetMapping("/Products")
+	public List<Product> getAllProducts()
+	{
+
+		try {
+			List<Product>  allExtractedUsers = userService.getAllProducts();
+			
+			return allExtractedUsers;
+			
+		} catch (Exception e) {
+		
+			System.out.println(e);
+			
+		}
+		
+		return null;
+	}
+	
+	// http://localhost:8888/es/review/reviews
+@GetMapping("/reviews")
+public List<Review> getAllReviews()
+{
+
+ try {
+  List<Review> allExtractedUsers = userService.getAllReviews(null);
+ 
+  return allExtractedUsers;
+ 
+ } catch (Exception e) {
+ 
+  System.out.println(e);
+ 
+ }
+ 
+ return null;
+}
 	@PostMapping("/user")
 	public ResponseEntity<String> addUser(@RequestBody User user) 
 	{
