@@ -48,6 +48,13 @@ public class AdminWebController {
 		
 		return null;
 	}
+	
+	 @GetMapping("/welcome")
+    public String welcomeMessage(){
+        return "Hello , Welcome to Online Electronic Store";
+    }
+
+	
 	//http://localhost:4444/es/profile/Profiles
 	@GetMapping("/Profiles")
 	public List<Profile> getAllProfiles()
