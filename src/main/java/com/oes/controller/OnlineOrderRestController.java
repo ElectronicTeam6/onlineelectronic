@@ -136,7 +136,7 @@ public class OnlineOrderRestController {
 	
   @GetMapping("/welcome")
     public String welcomeMessage(){
-        return "hello";
+        return "Hello";
     }
 
 	
