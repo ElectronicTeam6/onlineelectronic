@@ -134,6 +134,10 @@ public class OnlineOrderRestController {
 		return orderService.getAllOrdersByProductName(productName);
 	}
 	
+  @GetMapping("/welcome")
+    public String welcomeMessage(){
+        return "hello";
+    }
 
 	
 }
