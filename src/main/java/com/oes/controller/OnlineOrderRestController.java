@@ -133,11 +133,6 @@ public class OnlineOrderRestController {
 	public List<OnlineOrder> viewAllOrdersByProductName(@PathVariable String productName)throws Exception{
 		return orderService.getAllOrdersByProductName(productName);
 	}
-	
-  @GetMapping("/welcome")
-    public String welcomeMessage(){
-        return "Hello";
-    }
 
 	
 }
